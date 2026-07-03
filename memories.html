@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Memories ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+
+background:linear-gradient(180deg,#090422,#17092f,#2b0d48);
+
+font-family:Poppins,sans-serif;
+
+color:white;
+
+overflow-x:hidden;
+
+}
+
+h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:70px;
+
+text-align:center;
+
+margin:40px;
+
+color:#ff8fc1;
+
+}
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+padding:40px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.08);
+
+border-radius:25px;
+
+overflow:hidden;
+
+backdrop-filter:blur(12px);
+
+transition:.4s;
+
+cursor:pointer;
+
+box-shadow:0 0 20px rgba(255,105,180,.2);
+
+}
+
+.card:hover{
+
+transform:translateY(-10px) scale(1.03);
+
+box-shadow:0 0 30px hotpink;
+
+}
+
+.card img{
+
+width:100%;
+
+height:300px;
+
+object-fit:cover;
+
+}
+
+.caption{
+
+padding:20px;
+
+text-align:center;
+
+font-size:18px;
+
+}
+
+.message{
+
+max-width:900px;
+
+margin:60px auto;
+
+padding:40px;
+
+background:rgba(255,255,255,.07);
+
+border-radius:25px;
+
+text-align:center;
+
+font-size:22px;
+
+line-height:2;
+
+backdrop-filter:blur(10px);
+
+}
+
+.end{
+
+text-align:center;
+
+margin:70px 30px;
+
+}
+
+.end h2{
+
+font-family:'Great Vibes';
+
+font-size:60px;
+
+color:#ff8fbf;
+
+margin-bottom:30px;
+
+}
+
+.typing{
+
+font-size:28px;
+
+border-right:3px solid pink;
+
+display:inline-block;
+
+white-space:nowrap;
+
+overflow:hidden;
+
+animation:
+
+typing 8s steps(60,end),
+
+blink .8s infinite;
+
+}
+
+@keyframes typing{
+
+from{width:0;}
+
+to{width:100%;}
+
+}
+
+@keyframes blink{
+
+50%{
+
+border-color:transparent;
+
+}
+
+}
+
+button{
+
+margin-top:40px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Our Beautiful Memories ❤️</h1>
+
+<div class="gallery">
+
+<div class="card">
+
+<img src="image">
+
+<div class="caption">
+
+The day my heart found its favorite person ❤️
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/photo2.jpg">
+
+<div class="caption">
+
+Every picture with you becomes my favorite.
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/photo3.jpg">
+
+<div class="caption">
+
+One smile from you is enough to brighten my whole day.
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/photo4.jpg">
+
+<div class="caption">
+
+Distance can't erase memories like these.
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/photo5.jpg">
+
+<div class="caption">
+
+Forever grateful for every moment with you.
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/photo6.jpg">
+
+<div class="caption">
+
+And this is only the beginning of our story.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="message">
+
+I know there are days when the distance feels impossible.
+
+There are moments when all I want is to hold your hand, hug you tightly, and remind you that everything will be okay.
+
+Until that day finally arrives...
+
+please remember that no matter where we are,
+
+my heart has already chosen its home.
+
+And that home is you.
+
+❤️
+
+</div>
+
+<div class="end">
+
+<h2>
+
+One Last Thing...
+
+</h2>
+
+<div class="typing">
+
+If I had to choose again...
+I'd still choose you.
+Every.
+Single.
+Time.
+❤️
+
+</div>
+
+<br>
+
+<button onclick="loveRain()">
+
+One More Surprise ❤️
+
+</button>
+
+</div>
+
+<script>
+
+function loveRain(){
+
+for(let i=0;i<120;i++){
+
+let heart=document.createElement("div");
+
+heart.innerHTML="❤️";
+
+heart.style.position="fixed";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.top="-50px";
+
+heart.style.fontSize=(20+Math.random()*30)+"px";
+
+heart.style.transition="5s linear";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.style.top="110vh";
+
+},50);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},5500);
+
+}
+
+setTimeout(()=>{
+
+alert("No matter how many years pass...\n\nI will always love you. ❤️");
+
+},2500);
+
+}
+
+</script>
+
+</body>
+
+</html>
