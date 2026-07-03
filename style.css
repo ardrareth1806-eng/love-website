@@ -1,0 +1,377 @@
+/* ==========================
+   GOOGLE FONT
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(to bottom,#070b34,#120136,#2b0b3f);
+    color:white;
+    overflow:hidden;
+    min-height:100vh;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+    padding:30px;
+    z-index:2;
+    position:relative;
+}
+
+.hero h3{
+    color:#ffd6e8;
+    letter-spacing:2px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-family:'Great Vibes',cursive;
+    font-size:70px;
+    color:#ff7eb6;
+    margin-bottom:25px;
+    text-shadow:0 0 25px hotpink;
+}
+
+.hero p{
+    max-width:650px;
+    font-size:20px;
+    line-height:1.8;
+    color:#eee;
+    margin-bottom:40px;
+}
+
+button{
+    border:none;
+    padding:18px 45px;
+    border-radius:50px;
+    background:#ff4d88;
+    color:white;
+    cursor:pointer;
+    font-size:18px;
+    transition:.4s;
+    box-shadow:0 0 25px hotpink;
+}
+
+button:hover{
+    transform:scale(1.08);
+    background:#ff2e74;
+}
+
+/* ==========================
+   MOON
+========================== */
+
+.cloud{
+    position:absolute;
+    top:60px;
+    right:90px;
+
+    width:120px;
+    height:120px;
+
+    background:white;
+
+    border-radius:50%;
+
+    box-shadow:
+    0 0 40px white,
+    0 0 80px white;
+
+}
+
+/* ==========================
+   STARS
+========================== */
+
+.rainbows{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-image:
+    radial-gradient(white 1px,transparent 1px),
+    radial-gradient(white 2px,transparent 2px),
+    radial-gradient(white 1px,transparent 1px);
+
+    background-size:
+    120px 120px,
+    200px 200px,
+    300px 300px;
+
+    animation:twinkle 10s linear infinite;
+}
+
+@keyframes twinkle{
+
+0%{
+opacity:.4;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+opacity:.4;
+}
+
+}
+
+/* ==========================
+   FLOATING HEARTS
+========================== */
+
+.hearts::before,
+.hearts::after{
+
+content:"❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤";
+
+position:absolute;
+
+width:100%;
+
+font-size:25px;
+
+left:0;
+
+color:rgba(255,105,180,.3);
+
+animation:float 12s linear infinite;
+
+}
+
+.hearts::after{
+
+animation-delay:6s;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(100vh);
+
+}
+
+100%{
+
+transform:translateY(-120vh);
+
+}
+
+}
+
+/* ==========================
+   ENVELOPE
+========================== */
+
+.hidden{
+
+display:none;
+
+}
+
+.envelope-page{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+}
+
+.envelope{
+
+position:relative;
+
+width:350px;
+
+height:220px;
+
+background:#ffcad4;
+
+border-radius:10px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.4);
+
+}
+
+.top{
+
+position:absolute;
+
+width:100%;
+
+height:110px;
+
+background:#ff8fab;
+
+clip-path:polygon(0 0,50% 100%,100% 0);
+
+}
+
+.letter{
+
+position:absolute;
+
+background:white;
+
+width:90%;
+
+left:5%;
+
+top:20px;
+
+padding:20px;
+
+border-radius:10px;
+
+text-align:center;
+
+color:#444;
+
+transition:.6s;
+
+}
+
+.envelope:hover .letter{
+
+transform:translateY(-40px);
+
+}
+
+.letter h2{
+
+color:#ff4d88;
+
+margin-bottom:15px;
+
+}
+
+.letter p{
+
+margin-bottom:20px;
+
+}
+
+/* ==========================
+   LOVE NOTE
+========================== */
+
+.love-note{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+height:100vh;
+
+padding:30px;
+
+text-align:center;
+
+animation:fade 1s ease;
+
+}
+
+.love-note h1{
+
+font-family:'Great Vibes';
+
+font-size:70px;
+
+margin-bottom:30px;
+
+color:#ff80ab;
+
+}
+
+.love-note p{
+
+font-size:22px;
+
+max-width:650px;
+
+line-height:1.8;
+
+margin-bottom:35px;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:50px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.moon{
+
+width:80px;
+height:80px;
+right:30px;
+
+}
+
+.envelope{
+
+width:300px;
+
+}
+
+}
