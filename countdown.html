@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Until I See You ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+background:linear-gradient(180deg,#05051f,#120430,#250942);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+font-family:Poppins,sans-serif;
+color:white;
+}
+
+.container{
+text-align:center;
+padding:40px;
+}
+
+h1{
+font-family:'Great Vibes',cursive;
+font-size:70px;
+margin-bottom:20px;
+color:#ff8fc1;
+}
+
+.subtitle{
+font-size:22px;
+margin-bottom:40px;
+color:#f3d8e6;
+}
+
+.heart{
+
+font-size:80px;
+
+animation:beat 1s infinite;
+
+margin-bottom:30px;
+
+}
+
+@keyframes beat{
+
+0%{transform:scale(1);}
+25%{transform:scale(1.2);}
+50%{transform:scale(1);}
+75%{transform:scale(1.2);}
+100%{transform:scale(1);}
+
+}
+
+.timer{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+margin-bottom:40px;
+
+}
+
+.box{
+
+background:rgba(255,255,255,.1);
+
+padding:25px;
+
+border-radius:20px;
+
+width:120px;
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 0 20px rgba(255,105,180,.4);
+
+}
+
+.number{
+
+font-size:40px;
+
+font-weight:bold;
+
+color:#ff8fbf;
+
+}
+
+.label{
+
+margin-top:10px;
+
+font-size:16px;
+
+}
+
+button{
+
+margin-top:20px;
+
+}
+
+.quote{
+
+margin-top:40px;
+
+font-size:22px;
+
+font-style:italic;
+
+color:#ffd9ea;
+
+min-height:70px;
+
+padding:10px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Until We Meet Again ❤️</h1>
+
+<p class="subtitle">
+
+Every second brings us closer.
+
+</p>
+
+<div class="heart">
+
+❤️
+
+</div>
+
+<div class="timer">
+
+<div class="box">
+
+<div id="days" class="number">00</div>
+
+<div class="label">Days</div>
+
+</div>
+
+<div class="box">
+
+<div id="hours" class="number">00</div>
+
+<div class="label">Hours</div>
+
+</div>
+
+<div class="box">
+
+<div id="minutes" class="number">00</div>
+
+<div class="label">Minutes</div>
+
+</div>
+
+<div class="box">
+
+<div id="seconds" class="number">00</div>
+
+<div class="label">Seconds</div>
+
+</div>
+
+</div>
+
+<button onclick="newReason()">
+
+❤️ Why I Love You
+
+</button>
+
+<div class="quote" id="quote">
+
+I fall in love with you a little more every day.
+
+</div>
+
+<br><br>
+
+<a href="memories.html">
+
+<button>
+
+Our Memories 📸
+
+</button>
+
+</a>
+
+</div>
+
+<script>
+
+// CHANGE THIS DATE
+const meetDate = new Date("2026-09- 12:00:00");
+
+function updateCountdown(){
+
+const now = new Date();
+
+const diff = meetDate-now;
+
+const days=Math.floor(diff/(1000*60*60*24));
+
+const hours=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+
+const minutes=Math.floor((diff%(1000*60*60))/(1000*60));
+
+const seconds=Math.floor((diff%(1000*60))/1000);
+
+document.getElementById("days").innerHTML=days;
+document.getElementById("hours").innerHTML=hours;
+document.getElementById("minutes").innerHTML=minutes;
+document.getElementById("seconds").innerHTML=seconds;
+
+}
+
+setInterval(updateCountdown,1000);
+
+updateCountdown();
+
+const reasons=[
+
+"Because your smile brightens my darkest days ❤️",
+
+"Because you make distance feel worth it.",
+
+"Because you're my safest place.",
+
+"Because you're my best friend.",
+
+"Because you believe in me.",
+
+"Because you make me laugh.",
+
+"Because you understand me.",
+
+"Because I'd choose you every single time.",
+
+"Because you're my forever.",
+
+"Because loving you is the best decision I've ever taken."
+
+];
+
+function newReason(){
+
+let random=Math.floor(Math.random()*reasons.length);
+
+document.getElementById("quote").innerHTML=reasons[random];
+
+}
+
+</script>
+
+</body>
+
+</html>
