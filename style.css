@@ -371,7 +371,12 @@ right:30px;
 .envelope{
 
 width:300px;
-
+}
+   
+   .stars,
+.hearts,
+.moon{
+    pointer-events: none;
 }
 
 }
